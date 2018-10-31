@@ -3,7 +3,7 @@ import {INCREMENT, DECREMENT, RESET} from '../actions/counter';
 // 初始化state
 const initState = {
     count: 0
-}
+};
 
 // reducer
 export default function reducer(state=initState, action){

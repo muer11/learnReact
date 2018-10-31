@@ -13,7 +13,7 @@ let unsubscribe = store.subscribe(()=>{
 // 发起一系列action
 store.dispatch(increment());
 store.dispatch(decrement());
-store.dispatch(reet());
+store.dispatch(reset());
 
 // 停止监听state更新
 unsubscribe();

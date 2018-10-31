@@ -9,6 +9,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
+import {Provider} from 'react-redux'; // 让所有容器组件都可以访问store
+import store from './redux/store';
 import getRouter from './router/router';
 // import Hello from './component/Hello/Hello';
 
@@ -26,7 +28,9 @@ if(module.hot){
 function renderWithHotReload(RootElement){
     ReactDom.render(
         <AppContainer>
-            {RootElement}
+            <Provider store={store}>
+                {RootElement}
+            </Provider>
         </AppContainer>,
         document.getElementById('app')
     );
